@@ -114,11 +114,11 @@ export function SwipeableCard({
         </View>
         <SwipeIndicator
           type="right"
-          style={[styles.rightIndicator, rightIndicatorStyle]}
+          style={[styles.rightIndicator, rightIndicatorStyle] as any}
         />
         <SwipeIndicator
           type="left"
-          style={[styles.leftIndicator, leftIndicatorStyle]}
+          style={[styles.leftIndicator, leftIndicatorStyle] as any}
         />
       </Animated.View>
     </PanGestureHandler>
@@ -135,11 +135,11 @@ const styles = StyleSheet.create({
   rightIndicator: {
     position: 'absolute',
     top: 50,
-    right: 20,
+    left: 20,
   },
   leftIndicator: {
     position: 'absolute',
     top: 50,
-    left: 20,
+    right: 20,
   },
 });

@@ -70,7 +70,7 @@ export function SwipeCards() {
                 { translateY: index * 10 },
               ],
             },
-          ]}
+          ] as any}
         >
           <JobCard job={job} />
         </SwipeableCard>
