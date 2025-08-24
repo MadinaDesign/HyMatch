@@ -71,7 +71,7 @@ export default function FilterModal() {
   return (
     <SafeAreaView style={[styles.container, theme === 'dark' && { backgroundColor: '#18181b' }]}>
       <LinearGradient
-        colors={theme === 'dark' ? ['#222', '#111'] : ['#10B981', '#059669']}
+        colors={theme === 'dark' ? ['#222', '#111'] : ['#C19A6B', '#C19A6B']}
         style={styles.header}
       >
         <View style={styles.headerContent}>
@@ -94,7 +94,7 @@ export default function FilterModal() {
               style={[
                 styles.option,
                 localSortBy === option.key && styles.optionSelected,
-                theme === 'dark' && { backgroundColor: '#27272a', borderColor: '#10B981' }
+                theme === 'dark' && { backgroundColor: '#27272a', borderColor: '#C19A6B' }
               ]}
               onPress={() => setLocalSortBy(option.key)}
             >
@@ -106,7 +106,7 @@ export default function FilterModal() {
                 {option.label}
               </Text>
               {localSortBy === option.key && (
-                <Check size={20} color="#10B981" />
+                <Check size={20} color="#C19A6B" />
               )}
             </TouchableOpacity>
           ))}
@@ -121,7 +121,7 @@ export default function FilterModal() {
                 style={[
                   styles.gridOption,
                   localFilters.jobTypes.includes(type) && styles.gridOptionSelected,
-                  theme === 'dark' && { backgroundColor: '#27272a', borderColor: '#10B981' }
+                  theme === 'dark' && { backgroundColor: '#27272a', borderColor: '#C19A6B' }
                 ]}
                 onPress={() => toggleJobType(type)}
               >
@@ -146,7 +146,7 @@ export default function FilterModal() {
                 style={[
                   styles.gridOption,
                   localFilters.japaneseLevels.includes(level) && styles.gridOptionSelected,
-                  theme === 'dark' && { backgroundColor: '#27272a', borderColor: '#10B981' }
+                  theme === 'dark' && { backgroundColor: '#27272a', borderColor: '#C19A6B' }
                 ]}
                 onPress={() => toggleJapaneseLevel(level)}
               >
@@ -171,7 +171,7 @@ export default function FilterModal() {
                 style={[
                   styles.gridOption,
                   localFilters.workDays.includes(day) && styles.gridOptionSelected,
-                  theme === 'dark' && { backgroundColor: '#27272a', borderColor: '#10B981' }
+                  theme === 'dark' && { backgroundColor: '#27272a', borderColor: '#C19A6B' }
                 ]}
                 onPress={() => toggleWorkDay(day)}
               >
@@ -203,7 +203,7 @@ export default function FilterModal() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f0fdf4',
+    backgroundColor: '#E2E2D5',
   },
   header: {
     paddingHorizontal: 20,
@@ -253,8 +253,8 @@ const styles = StyleSheet.create({
     borderColor: '#e5e7eb',
   },
   optionSelected: {
-    backgroundColor: '#f0fdf4',
-    borderColor: '#10B981',
+    backgroundColor: '#F5F1E8',
+    borderColor: '#C19A6B',
   },
   optionText: {
     fontSize: 16,
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
     color: '#374151',
   },
   optionTextSelected: {
-    color: '#10B981',
+    color: '#C19A6B',
   },
   optionsGrid: {
     flexDirection: 'row',
@@ -278,8 +278,8 @@ const styles = StyleSheet.create({
     borderColor: '#e5e7eb',
   },
   gridOptionSelected: {
-    backgroundColor: '#f0fdf4',
-    borderColor: '#10B981',
+    backgroundColor: '#F5F1E8',
+    borderColor: '#C19A6B',
   },
   gridOptionText: {
     fontSize: 14,
@@ -288,7 +288,7 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
   },
   gridOptionTextSelected: {
-    color: '#10B981',
+    color: '#C19A6B',
   },
   footer: {
     flexDirection: 'row',
@@ -312,11 +312,11 @@ const styles = StyleSheet.create({
   },
   applyButton: {
     flex: 2,
-    backgroundColor: '#10B981',
+    backgroundColor: '#C19A6B',
     borderRadius: 12,
     paddingVertical: 16,
     alignItems: 'center',
-    shadowColor: '#10B981',
+    shadowColor: '#C19A6B',
     shadowOffset: {
       width: 0,
       height: 4,

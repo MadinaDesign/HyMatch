@@ -25,7 +25,7 @@ export function SwipeIndicator({ type, style }: SwipeIndicatorProps) {
         <X size={24} color="#ffffff" strokeWidth={3} />
       )}
       <Text style={[styles.text, isRight ? styles.rightText : styles.leftText]}>
-        {isRight ? 'CHOOSE' : 'PASS'}
+        {isRight ? 'CHOOSE' : 'REFUSAL'}
       </Text>
     </Animated.View>
   );
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   rightContainer: {
-    backgroundColor: '#C19A6B',
+    backgroundColor: '#10B981',
   },
   leftContainer: {
     backgroundColor: '#EF4444',

@@ -24,7 +24,7 @@ export default function HomeScreen() {
           
           <View style={styles.titleContainer}>
             <Text style={[styles.title, theme === 'dark' && { color: '#fff' }]}>{t('app.title')}</Text>
-            <Text style={[styles.subtitle, theme === 'dark' && { color: '#d1fae5' }]}>{t('app.subtitle')}</Text>
+            <Text style={[styles.subtitle, theme === 'dark' && { color: '#ffffff' }]}>{t('app.subtitle')}</Text>
           </View>
           
           <TouchableOpacity
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     fontFamily: 'Inter-Medium',
-    color: '#d1fae5',
+    color: '#ffffff',
     textAlign: 'center',
   },
   content: {

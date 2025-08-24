@@ -1,5 +1,6 @@
 import { Tabs } from 'expo-router';
-import { Heart, X, Check, User, Settings } from 'lucide-react-native';
+import { Briefcase, X, Check, User, Settings } from 'lucide-react-native';
+
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function TabLayout() {
@@ -28,16 +29,17 @@ export default function TabLayout() {
           fontFamily: 'Inter-SemiBold',
           fontSize: 12,
         },
-        tabBarActiveTintColor: '#10B981',
+        tabBarActiveTintColor: '#8B4513',
         tabBarInactiveTintColor: '#9ca3af',
       }}>
       <Tabs.Screen
         name="refused"
         options={{
           title: t('tabs.refused'),
-          tabBarIcon: ({ size, color }) => (
-            <X size={size} color={color} />
+          tabBarIcon: ({ size, color, focused }) => (
+            <X size={size} color={focused ? '#EF4444' : color} />
           ),
+          tabBarActiveTintColor: '#EF4444',
         }}
       />
       <Tabs.Screen
@@ -45,7 +47,7 @@ export default function TabLayout() {
         options={{
           title: t('tabs.jobs'),
           tabBarIcon: ({ size, color }) => (
-            <Heart size={size} color={color} />
+            <Briefcase size={size} color={color} />
           ),
         }}
       />
@@ -53,9 +55,10 @@ export default function TabLayout() {
         name="chosen"
         options={{
           title: t('tabs.chosen'),
-          tabBarIcon: ({ size, color }) => (
-            <Check size={size} color={color} />
+          tabBarIcon: ({ size, color, focused }) => (
+            <Check size={size} color={focused ? '#10B981' : color} />
           ),
+          tabBarActiveTintColor: '#10B981',
         }}
       />
     </Tabs>

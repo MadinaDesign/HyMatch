@@ -27,11 +27,11 @@ export default function ContactModal() {
   return (
     <SafeAreaView style={[styles.container, theme === 'dark' && { backgroundColor: '#18181b' }]}>
       <LinearGradient
-        colors={theme === 'dark' ? ['#222', '#111'] : ['#10B981', '#059669']}
+        colors={theme === 'dark' ? ['#222', '#111'] : ['#C19A6B', '#C19A6B']}
         style={styles.header}
       >
         <View style={styles.headerContent}>
-          <Text style={styles.title}>{t('contact.title')}</Text>
+          <Text style={[styles.title, { color: '#ffffff', fontWeight: 'bold' }]}>{t('contact.title')}</Text>
           <TouchableOpacity
             style={styles.closeButton}
             onPress={() => router.back()}
@@ -69,7 +69,7 @@ export default function ContactModal() {
           </LinearGradient>
           <View style={styles.contactInfo}>
             <Text style={[styles.contactTitle, theme === 'dark' && { color: '#fff' }]}>{t('contact.email')}</Text>
-            <Text style={[styles.contactDetail, theme === 'dark' && { color: '#10B981' }]}>support@hymatch.jp</Text>
+            <Text style={[styles.contactDetail, { color: '#3B82F6' }, theme === 'dark' && { color: '#3B82F6' }]}>support@hymatch.jp</Text>
             <Text style={[styles.contactHours, theme === 'dark' && { color: '#a1a1aa' }]}>{t('contact.emailDetail')}</Text>
           </View>
         </TouchableOpacity>
@@ -83,7 +83,7 @@ export default function ContactModal() {
           </LinearGradient>
           <View style={styles.contactInfo}>
             <Text style={[styles.contactTitle, theme === 'dark' && { color: '#fff' }]}>{t('contact.chat')}</Text>
-            <Text style={[styles.contactDetail, theme === 'dark' && { color: '#10B981' }]}>Chat with our team</Text>
+            <Text style={[styles.contactDetail, { color: '#F59E0B' }, theme === 'dark' && { color: '#F59E0B' }]}>Chat with our team</Text>
             <Text style={[styles.contactHours, theme === 'dark' && { color: '#a1a1aa' }]}>{t('contact.chatDetail')}</Text>
           </View>
         </TouchableOpacity>
@@ -95,7 +95,7 @@ export default function ContactModal() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f0fdf4',
+    backgroundColor: '#E2E2D5',
   },
   header: {
     paddingHorizontal: 20,

@@ -31,7 +31,7 @@ export default function SettingsScreen() {
   return (
     <SafeAreaView style={[styles.container, theme === 'dark' && styles.containerDark]}>
       <LinearGradient
-        colors={['#10B981', '#059669']}
+        colors={['#C19A6B', '#C19A6B']}
         style={styles.header}
       >
         <View style={styles.headerContent}>
@@ -50,7 +50,7 @@ export default function SettingsScreen() {
         <View style={[styles.sectionCard, theme === 'dark' && styles.sectionCardDark]}>
           <Text style={styles.sectionTitle}>{t('settings.account') || 'Account'}</Text>
           <TouchableOpacity style={styles.settingRow} onPress={() => {/* TODO: Add account logic or navigation */}}>
-            <User size={20} color="#10B981" style={{ marginRight: 16 }} />
+            <User size={20} color="#C19A6B" style={{ marginRight: 16 }} />
             <Text style={styles.settingText}>{t('settings.addAccount') || 'Add Account'}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.settingRow} onPress={() => setDeleteModalVisible(true)}>
@@ -62,11 +62,11 @@ export default function SettingsScreen() {
         <View style={[styles.sectionCard, theme === 'dark' && styles.sectionCardDark]}>
           <Text style={styles.sectionTitle}>{t('settings.preferences') || 'Preferences'}</Text>
           <TouchableOpacity style={styles.settingRow} onPress={() => router.push('./settings/language')}>
-            <Globe size={20} color="#10B981" style={{ marginRight: 16 }} />
+            <Globe size={20} color="#C19A6B" style={{ marginRight: 16 }} />
             <Text style={styles.settingText}>{t('language.select') || 'Language'}</Text>
           </TouchableOpacity>
           <View style={styles.settingRow}>
-            <Moon size={20} color="#10B981" style={{ marginRight: 16 }} />
+            <Moon size={20} color="#C19A6B" style={{ marginRight: 16 }} />
             <Text style={[styles.settingText, theme === 'dark' && { color: '#fff' }]}>{t('settings.darkMode') || 'Dark Mode'}</Text>
             <View style={{ flex: 1, alignItems: 'flex-end' }}>
               <Switch
@@ -78,7 +78,7 @@ export default function SettingsScreen() {
             </View>
           </View>
           <View style={styles.settingRow}>
-            <Bell size={20} color="#10B981" style={{ marginRight: 16 }} />
+            <Bell size={20} color="#C19A6B" style={{ marginRight: 16 }} />
             <Text style={styles.settingText}>{t('settings.notifications') || 'Notifications'}</Text>
             <View style={{ flex: 1, alignItems: 'flex-end' }}>
               <Switch
@@ -94,11 +94,11 @@ export default function SettingsScreen() {
         <View style={[styles.sectionCard, theme === 'dark' && styles.sectionCardDark]}>
           <Text style={styles.sectionTitle}>{t('settings.support') || 'Support'}</Text>
           <TouchableOpacity style={styles.settingRow} onPress={() => router.push('/contact')}>
-            <HelpCircle size={20} color="#10B981" style={{ marginRight: 16 }} />
+            <HelpCircle size={20} color="#C19A6B" style={{ marginRight: 16 }} />
             <Text style={styles.settingText}>{t('settings.contact') || 'Contact Us'}</Text>
           </TouchableOpacity>
           <View style={styles.settingRow}>
-            <Info size={20} color="#10B981" style={{ marginRight: 16 }} />
+            <Info size={20} color="#C19A6B" style={{ marginRight: 16 }} />
             <Text style={styles.settingText}>{t('settings.about') || 'About'}</Text>
           </View>
         </View>
@@ -135,7 +135,7 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f0fdf4',
+    backgroundColor: '#E2E2D5',
   },
   containerDark: {
     backgroundColor: '#18181b',
