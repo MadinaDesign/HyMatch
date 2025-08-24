@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Ima
 import { useUser } from '@/contexts/UserContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useRouter } from 'expo-router';
-import { CreditCard as Edit, User as UserIcon, Mail, Phone, MapPin, Calendar, BriefcaseBusiness, X, Eye, Clock } from 'lucide-react-native';
+import { Pencil as Edit, User as UserIcon, Mail, Phone, MapPin, Calendar, BriefcaseBusiness, X, Eye, Clock } from 'lucide-react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme } from './_layout';
 
