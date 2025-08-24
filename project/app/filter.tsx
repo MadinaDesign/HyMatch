@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } fr
 import { useRouter } from 'expo-router';
 import { useJobs, JobFilters, SortOption } from '@/contexts/JobContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { X, Check } from 'lucide-react-native';
+import { X, Check, ArrowUpDown, BriefcaseBusiness, BookOpen, CalendarDays } from 'lucide-react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme } from './_layout';
 
@@ -87,7 +87,10 @@ export default function FilterModal() {
 
       <ScrollView style={[styles.content, theme === 'dark' && { backgroundColor: '#18181b' }]} showsVerticalScrollIndicator={false}>
         <View style={[styles.section, theme === 'dark' && { backgroundColor: '#27272a' }]}>
-          <Text style={[styles.sectionTitle, theme === 'dark' && { color: '#fff' }]}>{t('sort.title')}</Text>
+          <View style={styles.sectionTitle}>
+            <ArrowUpDown size={24} color="#C19A6B" />
+            <Text style={[styles.sectionTitleText, theme === 'dark' && { color: '#fff' }]}>{t('sort.title')}</Text>
+          </View>
           {sortOptions.map((option) => (
             <TouchableOpacity
               key={option.key}
@@ -113,7 +116,10 @@ export default function FilterModal() {
         </View>
 
         <View style={[styles.section, theme === 'dark' && { backgroundColor: '#27272a' }]}>
-          <Text style={[styles.sectionTitle, theme === 'dark' && { color: '#fff' }]}>{t('filter.jobType')}</Text>
+          <View style={styles.sectionTitle}>
+            <BriefcaseBusiness size={24} color="#C19A6B" />
+            <Text style={[styles.sectionTitleText, theme === 'dark' && { color: '#fff' }]}>{t('filter.jobType')}</Text>
+          </View>
           <View style={styles.optionsGrid}>
             {jobTypes.map((type) => (
               <TouchableOpacity
@@ -138,7 +144,10 @@ export default function FilterModal() {
         </View>
 
         <View style={[styles.section, theme === 'dark' && { backgroundColor: '#27272a' }]}>
-          <Text style={[styles.sectionTitle, theme === 'dark' && { color: '#fff' }]}>{t('filter.japanese')}</Text>
+          <View style={styles.sectionTitle}>
+            <BookOpen size={24} color="#C19A6B" />
+            <Text style={[styles.sectionTitleText, theme === 'dark' && { color: '#fff' }]}>{t('filter.japanese')}</Text>
+          </View>
           <View style={styles.optionsGrid}>
             {japaneseLevels.map((level) => (
               <TouchableOpacity
@@ -163,7 +172,10 @@ export default function FilterModal() {
         </View>
 
         <View style={[styles.section, theme === 'dark' && { backgroundColor: '#27272a' }]}>
-          <Text style={[styles.sectionTitle, theme === 'dark' && { color: '#fff' }]}>{t('filter.workDays')}</Text>
+          <View style={styles.sectionTitle}>
+            <CalendarDays size={24} color="#C19A6B" />
+            <Text style={[styles.sectionTitleText, theme === 'dark' && { color: '#fff' }]}>{t('filter.workDays')}</Text>
+          </View>
           <View style={styles.optionsGrid}>
             {workDays.map((day) => (
               <TouchableOpacity
@@ -236,10 +248,17 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
   sectionTitle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    gap: 8,
+    padding: 6,
+    minHeight: 32,
+  },
+  sectionTitleText: {
     fontSize: 20,
     fontFamily: 'Inter-Bold',
     color: '#1f2937',
-    marginBottom: 16,
   },
   option: {
     flexDirection: 'row',
