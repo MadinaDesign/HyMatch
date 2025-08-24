@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Ima
 import { useUser } from '@/contexts/UserContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useRouter } from 'expo-router';
-import { CreditCard as Edit, User as UserIcon, Mail, Phone, MapPin, Calendar, Briefcase, X, Eye, Clock } from 'lucide-react-native';
+import { CreditCard as Edit, User as UserIcon, Mail, Phone, MapPin, Calendar, BriefcaseBusiness, X, Eye, Clock } from 'lucide-react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme } from './_layout';
 
@@ -84,7 +84,7 @@ export default function ProfileScreen() {
 
               <View style={styles.infoCard}>
                 <View style={styles.infoIcon}>
-                  <Briefcase size={20} color="#C19A6B" />
+                  <BriefcaseBusiness size={20} color="#C19A6B" />
                 </View>
                 <View style={styles.infoContent}>
                   <Text style={styles.infoLabel}>{t('profile.japaneseLevel')}</Text>

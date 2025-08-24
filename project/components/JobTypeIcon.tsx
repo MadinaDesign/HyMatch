@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { ChefHat, Truck, Package, Chrome as Home, Store, Utensils, Briefcase, HardHat } from 'lucide-react-native';
+import { ChefHat, Truck, Package, Chrome as Home, Store, Utensils, BriefcaseBusiness, HardHat } from 'lucide-react-native';
 
 interface JobTypeIconProps {
   type: string;
@@ -25,11 +25,11 @@ export function JobTypeIcon({ type, size = 64 }: JobTypeIconProps) {
       case 'restaurant':
         return <Utensils size={iconSize} color="#ffffff" />;
       case 'office':
-        return <Briefcase size={iconSize} color="#ffffff" />;
+        return <BriefcaseBusiness size={iconSize} color="#ffffff" />;
       case 'construction':
         return <HardHat size={iconSize} color="#ffffff" />;
       default:
-        return <Briefcase size={iconSize} color="#ffffff" />;
+        return <BriefcaseBusiness size={iconSize} color="#ffffff" />;
     }
   };
 

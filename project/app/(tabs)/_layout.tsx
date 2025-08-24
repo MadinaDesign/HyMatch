@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Briefcase, X, Check, User, Settings } from 'lucide-react-native';
+import { BriefcaseBusiness, X, Check, User, Settings } from 'lucide-react-native';
 
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -47,7 +47,7 @@ export default function TabLayout() {
         options={{
           title: t('tabs.jobs'),
           tabBarIcon: ({ size, color }) => (
-            <Briefcase size={size} color={color} />
+            <BriefcaseBusiness size={size} color={color} />
           ),
         }}
       />
